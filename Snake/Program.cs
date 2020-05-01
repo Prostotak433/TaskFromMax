@@ -10,6 +10,7 @@ namespace Snake
         static readonly int y = 30;
         static Walls walls;
         static FoodFactory foodFactory;
+        static Snake snake;
 
         static void Main(string[] args)
         {
@@ -19,6 +20,7 @@ namespace Snake
             walls = new Walls(x, y, '#');
             foodFactory = new FoodFactory(x, y, '@');
             foodFactory.CreateFood();
+            snake = new Snake(x / 2, y / 2, 3);
         }
     }
 }
