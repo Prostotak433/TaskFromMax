@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,5 +25,7 @@ namespace Snake
         {
             DrawPoint(' ');
         }
+        public static bool operator == (Point a, Point b) => (a.x == b.x && a.y == b.y) ? true : false;
+        public static bool operator != (Point a, Point b) => (a.x != b.x || a.y == b.y) ? true : false;
     }
 }

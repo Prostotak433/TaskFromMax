@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Threading;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Snake
@@ -33,6 +35,17 @@ namespace Snake
             DrawHorizontal(x, y);
             DrawVertical(0, y);
             DrawVertical(x, y);
+        }
+        public bool IsHit (Point p)
+        {
+            foreach(var w in wall)
+            {
+                if(p == w)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Linq;
 using System.Threading;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace Snake
 {
@@ -82,6 +82,28 @@ namespace Snake
                 }
                 rotate = false;
             }
+        }
+        public bool IsHit(Point p)
+        {
+            for(int i = snake.Count - 2; i > 0; i--)
+            {
+                if(snake[i] == p)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public bool Eat(Point p )
+        {
+            head = GetNextPoint();
+            if(head == p)
+            {
+                snake.Add(head);
+                head.Draw();
+                return true;
+            }
+            return false;
         }
     }
 }
