@@ -76,7 +76,7 @@ namespace Snake
                     case Direction.DOWN:
                         if (key == ConsoleKey.LeftArrow)
                             direction = Direction.LEFT;
-                        else if (key == ConsoleKey.DownArrow)
+                        else if (key == ConsoleKey.RightArrow)
                             direction = Direction.RIGHT;
                         break;
                 }
