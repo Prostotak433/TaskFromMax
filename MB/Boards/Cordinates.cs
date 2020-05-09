@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MB
 {
-    class Cordinates
+    public class Cordinates
     {
         public int Row { get; set; }
         public int Column { get; set; }

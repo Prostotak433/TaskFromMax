@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace MB
 {
-    class Panel
+    public class Panel
     {
         public Cordinates Cordinates { get; set; }
         public DisplayShot DisplayShot { get; set; }
         public Panel(int row, int column)
         {
-            Cordinates = new Cordinates(column, row);
+            Cordinates = new Cordinates(row, column);
             DisplayShot = DisplayShot.Empty;
         }
         public string Status
